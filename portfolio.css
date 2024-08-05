@@ -307,19 +307,21 @@ a{
 }
 #id1{
     margin-left: 120px;
-    background-image: url(projects/Project1.png);
+    background-image: url(userAsset/socialbook.png);
 }
 #id2{
     margin-right: 120px;
-    background-image: url(projects/Project2.png);
+    background-image: url(userAsset/Weather.png);
 }
 #id3{
     margin-left: 120px;
-    background-image: url(projects/Project3.png);
+    background-image: url(userAsset/razorpay.png);
 }
 #id4{
+    display: flex;
     margin-right: 120px;
     background-image: url(projects/Project4.png);
+    align-items: center;
 }
 .project-number{
     position: absolute;
@@ -356,7 +358,7 @@ a{
     left: 10%;
 }
 .project-content-right{
-    right: 10%;
+    left: 10%;
 }
 .project-skills-container {
     width: 60%;
@@ -398,7 +400,6 @@ a{
 .skills-container{
     display: flex;
     position: relative;
-    padding: 5rem;
     margin: 10rem auto;
     gap: 30px;
 }
@@ -421,7 +422,7 @@ a{
     font-size:15em;
     color: rgb(231,231,231); 
     font-style: bold;
-    bottom: -28.5%;
+    bottom: -35.5%;
     right: -5%;
     font-weight: 600;
     z-index: -1;
@@ -444,12 +445,24 @@ a{
     width: 130px;
     transition: all 0.5s;
 }
+.exp-logo {
+    width: 100%;
+    transition: all 0.5s;
+    margin: auto;
+}
 .skill-logo:hover{
     transform: scale(1.2);
 }
 .skill-heading{
     color: var(--bgOrange);
     font-size:50px;
+    line-height: 50px;
+    font-style: bold;
+}
+.exp-heading{
+    color: var(--bgOrange);
+    padding-bottom: 1em;
+    font-size:60px;
     line-height: 50px;
     font-style: bold;
 }
@@ -460,6 +473,12 @@ a{
     margin-top: 1rem;
     width: 85%;
     text-align: justify;
+}
+.exp-subhead{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+    line-height: 1.8em;
 }
 .contact-container{
     width: 100%;
@@ -485,19 +504,20 @@ a{
     
 }
 .form{
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    margin: 2rem 5rem;
 }
 .form-field-container{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+
 }
 .formfield {
-    width: 100%;
     height: 42px;
     padding: 0 2rem;
     font-size: 18px;
@@ -505,7 +525,7 @@ a{
     box-shadow:2px 2px 2px #1f1f1f ;
     font-weight: 500;
     border: none;
-    margin: 15px;
+    margin: 15px 0;
 }
 .formfield-text{
     height:auto;
@@ -556,6 +576,12 @@ footer{
 .icon-container{
     display: flex;
     gap: 1rem;
+}
+#work-exp{
+    flex-direction: column;
+}
+.exp-content-container{
+    margin: 0 !important;
 }
 
 
@@ -636,7 +662,7 @@ footer{
         font-size:10em;
         color: rgb(231,231,231); 
         font-style: bold;
-        bottom: -19.5%;
+        bottom: -40.5%;
         right: -2%;
     }
     .skill-logo {
@@ -652,5 +678,36 @@ footer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .exp-content-container{
+        flex-direction: column;
+    }
+    .content-left{
+        width: 100%;
+    }
+    .content-right{
+        width: 100%;
+    }
+    .exp-heading{
+        text-align: center;
+    }
+    .exp-subhead{
+        width: 100%;
+    }
+    .skill-logos-container{
+        display: none
+    }
+    .skills-subhead{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-heading{
+        font-size: 3rem;
+    }
+    .form-subheading{
+        font-size: 1.5rem;
     }
 }
